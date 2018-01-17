@@ -1,0 +1,23 @@
+.looper-main {
+	max-width: 60vw;
+	margin: 0 auto;
+	margin-top: 10vh;
+	border: 3px solid gray;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.all-buttons {
+	padding:  10px;
+	align-self: stretch;
+	display: flex;
+	justify-content: flex-start;
+
+}
+
+.tracks-section {
+	display: flex;
+	align-self: stretch;
+}
+
