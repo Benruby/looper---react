@@ -7,8 +7,7 @@
  import React from 'react';
  import { Button } from './Button';
  import { ButtonLabels } from '../common/ButtonLabels';
- import { TracksList } from './TracksList'
- import { data } from '../data/data';
+ import { TracksList } from './TracksList';
  import '../styles/looper.css';
  import '../styles/common.css';
 
@@ -74,23 +73,26 @@
 
 	 render() {
 	 	return(
-	 		<div className="looper-main">
-	 			<div className='all-buttons'>
-	 				<Button sync={this.sync}
-	 					name={ButtonLabels.SYNC}/>
-	 				<Button playAll={this.playAll}
-	 					name={this.state.playButtonName}/>
-	 				<Button stopAll={this.stopAll}
-	 					name={ButtonLabels.STOP}/>
-	 			</div>
+	 		<div>
+				<h2>Looper</h2>
+	 			<div className="looper-main element-border">
+	 				<div className='all-buttons'>
+	 					<Button sync={this.sync}
+	 						name={ButtonLabels.SYNC}/>
+	 					<Button playAll={this.playAll}
+	 						name={this.state.playButtonName}/>
+	 					<Button stopAll={this.stopAll}
+	 						name={ButtonLabels.STOP}/>
+	 				</div>
 	 			<div className='tracks-section'>
-
-	 				<TracksList 
-	 					playAll={this.state.playAll}
-	 					stopAll={this.state.stopAll}
-				 		ref={(list) => { this.list = list }}
-				 		tracks={data}
-	 					sync={this.state.sync}/>
+	 			<TracksList 
+	 				playAll={this.state.playAll}
+	 				stopAll={this.state.stopAll}
+	 				ref={(list) => { this.list = list }}
+	 				tracks={this.props.data}
+			 		removeTrack={this.props.removeTrack}
+	 				sync={this.state.sync}/>
+	 				</div>
 	 			</div>
 	 		</div>
 	 		);

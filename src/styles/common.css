@@ -5,3 +5,15 @@
 .padding-0 {
 	padding: 0 !important;
 }
+
+.element-border {
+	border: 3px solid gray;
+}
+
+.no-list-style {
+	list-style: none;
+}
+
+.no-margin {
+	margin:  0 !important;
+}

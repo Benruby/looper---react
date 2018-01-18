@@ -65,8 +65,6 @@
 	 	this.setSynchedBpmToList(maxBpm);
 	 }
 
-
-
 	 componentWillReceiveProps(nextProps: Props) {
 	 	//if sync is clicked, sort the list.
 	 	(nextProps.sync) ? this.sortListByDuration() : null;
@@ -84,12 +82,13 @@
 	 		playAll={this.props.playAll}
 	 		stopAll={this.props.stopAll}
 	 		sync={this.props.sync}
+	 		removeTrack={this.props.removeTrack}
 	 		synchedBpm={this.state.synchedBpm}/></li>;
 	 	});	
 
 	 	return(
 	 		<div className="tracks-list-wrapper">
-	 			<ul className="tracks-list padding-0">{tracksList}</ul>	
+	 			<ul className="tracks-list padding-0 no-list-style">{tracksList}</ul>	
 	 		</div>
 	 		);
 	 }

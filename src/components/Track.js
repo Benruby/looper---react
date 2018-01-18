@@ -11,7 +11,7 @@ import FaPlay from 'react-icons/lib/fa/play';
 import FaTrash from 'react-icons/lib/fa/trash';
 import FaVol from 'react-icons/lib/fa/volume-up';
 import FaPause from 'react-icons/lib/fa/pause';
-
+import { TrackInfo } from './TrackInfo'; 
 
 export class Track extends React.Component {
 	
@@ -76,26 +76,16 @@ export class Track extends React.Component {
 				<a className="track-play cursor-pointer" onClick={this.handlePlay}>
 					{buttonState}
 				</a>
-				<div className="track-info">
-					<div className="track track-owner">
-						{this.props.track.owner}
-					</div>
-					<div className="track track-genre">
-						{this.props.track.genre}
-					</div>
-					<div className="track track-bpm">
-						<span>
-							{bpmToShow}
-						</span>
-					</div>	
-					<div className="track track-bpm">
-						Duration: {this.props.track.duration}
-					</div>	
-				</div>
+					<TrackInfo
+						owner={this.props.track.owner}
+						genre={this.props.track.genre}
+						bpmToShow={bpmToShow}
+						duration={this.props.track.duration}
+					 />
 				<div className="track-actions">
 					<div className="row-actions">
 						<input  ref={(volumeSlider) => { this.volumeSlider = volumeSlider }} className="vol-bar" type="range" min="0" max="1" step="0.1"></input>
-							<FaTrash className="trash-icon" />
+							<FaTrash className="trash-icon cursor-pointer" onClick={this.props.removeTrack} data-track-id={this.props.track.id}/>
 					</div>
 					<div className="row-actions">
 						<FaVol className="vol-icon" />

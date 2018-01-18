@@ -176,6 +176,7 @@ export class TracksContainer extends React.Component {
 				handlePlay={this.handlePlay}
 				getOriginalBpm={this.getOriginalBpm} 
 				stopAudio={this.stopAudio}
+				removeTrack={this.props.removeTrack}
 				ref={(track) => { this.track = track }}/>
 			</div>
 			);
