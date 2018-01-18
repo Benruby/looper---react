@@ -70,9 +70,12 @@ export class Track extends React.Component {
 
 		return (
 			<div className="track-main">
+				{/* audio player*/}		
 				<audio className="audio" ref={(audio) => { this.audio = audio }}>
 					<source src={this.props.track.url}></source>
 				</audio>
+
+				{/* play/pause button*/}	
 				<a className="track-play cursor-pointer" onClick={this.handlePlay}>
 					{buttonState}
 				</a>
@@ -82,6 +85,7 @@ export class Track extends React.Component {
 						bpmToShow={bpmToShow}
 						duration={this.props.track.duration}
 					 />
+				{/* tracks bars and icons */}	
 				<div className="track-actions">
 					<div className="row-actions">
 						<input  ref={(volumeSlider) => { this.volumeSlider = volumeSlider }} className="vol-bar" type="range" min="0" max="1" step="0.1"></input>

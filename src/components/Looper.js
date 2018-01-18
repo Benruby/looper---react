@@ -76,6 +76,7 @@
 	 		<div>
 				<h2>Looper</h2>
 	 			<div className="looper-main element-border">
+	 				{/* Main Buttons section of the looper*/}	
 	 				<div className='all-buttons'>
 	 					<Button sync={this.sync}
 	 						name={ButtonLabels.SYNC}/>
@@ -84,7 +85,7 @@
 	 					<Button stopAll={this.stopAll}
 	 						name={ButtonLabels.STOP}/>
 	 				</div>
-	 			<div className='tracks-section'>
+	 			{/* tracks section of the looper*/}	 			<div className='tracks-section'>
 	 			<TracksList 
 	 				playAll={this.state.playAll}
 	 				stopAll={this.state.stopAll}
