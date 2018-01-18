@@ -1,3 +1,7 @@
+/**
+ * main component.
+ * Renders the Looper section and the inventory section.
+ */
 import React, { Component } from 'react';
 import { Looper } from './components/Looper';
 import { Inventory } from './components/Inventory';
@@ -72,13 +76,13 @@ class App extends Component {
 	render() {
 		return (
 			<div className="container">
-			<Looper 
-			data={this.state.selectedTracks}
-			removeTrack={this.removeFromSelected}/>
-			<Inventory 
-			inventory={this.state.inventory}
-			addToSelected={this.addToSelected}/>
-			</div>
+				<Looper 
+					data={this.state.selectedTracks}
+					removeTrack={this.removeFromSelected}/>
+				<Inventory 
+					inventory={this.state.inventory}
+					addToSelected={this.addToSelected}/>
+				</div>
 			);
 	}
 }

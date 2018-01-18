@@ -1,3 +1,9 @@
+/**
+ * inventory is a stateless component.
+ * The component renders the list of inventory from
+ * which a user can add tracks to the looper.
+ */
+
 import React from 'react';
 import { TrackInfo } from './TrackInfo';
 import '../styles/inventory.css';
@@ -9,6 +15,12 @@ export class Inventory extends React.Component {
 		this.handleItemSelection = this.handleItemSelection.bind(this);
 	}
 
+	/**
+	 * method is invoked when user selects a track
+	 * from the inventory list by clicking on it.
+	 * @param  {[type]} e [description]
+	 * @return {[type]}   [description]
+	 */
 	handleItemSelection(e) {
 		const itemId = e.currentTarget.dataset.id
 		this.props.addToSelected(itemId);
@@ -36,12 +48,12 @@ export class Inventory extends React.Component {
 
 		return (
 			<div>
-			<h2>Tracks Inventory:</h2>
-			<div className="inventory-nain element-border">
-			<ul className="padding-0 no-margin no-list-style">
-			{inventory}
-			</ul>
-			</div>
+				<h2>Tracks Inventory:</h2>
+					<div className="inventory-nain element-border">
+						<ul className="padding-0 no-margin no-list-style">
+							{inventory}
+						</ul>
+					</div>
 			</div>
 			);
 	};

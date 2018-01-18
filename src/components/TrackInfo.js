@@ -1,3 +1,10 @@
+/**
+ * A stateless component.
+ * renders track information such as name of owner, 
+ * track name, bpm etc.
+ * Component is used in inventory list and in looper.
+ */
+
 import React from 'react';
 
 export class TrackInfo extends React.Component {
@@ -20,6 +27,5 @@ export class TrackInfo extends React.Component {
 					</div>	
 				</div>
 			);
-
 	}
 }
