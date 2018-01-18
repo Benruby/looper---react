@@ -1,3 +1,7 @@
+/**
+ * this is the list of tracks.
+ */
+
 export const data = [{
 	Id:1,
 	url:'https://s3.amazonaws.com/candidate-task/Track+1.mp3',
