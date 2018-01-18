@@ -1,8 +1,15 @@
 .inventory-nain {
 	width: 30vw; 
-	border: ;
 }
 
 .inventory-item:hover {
 	background-color: lightblue;
+}
+
+@media screen and (max-width: 600px) {
+	.inventory-nain {
+		width: 100vw;
+		justify-content: 
+
+	}
 }

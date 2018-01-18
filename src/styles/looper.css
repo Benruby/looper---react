@@ -3,7 +3,6 @@
 	display: flex;
 	flex-direction: column;
 	padding: 20px;
-
 }
 
 .all-buttons {
@@ -17,5 +16,12 @@
 .tracks-section {
 	display: flex;
 	align-self: stretch;
+}
+
+@media screen and (max-width: 600px) {
+	.looper-main {
+		width: 90vw;
+
+	}
 }
 
