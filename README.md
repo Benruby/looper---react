@@ -15,7 +15,7 @@ I didn't use any CSS library.
   <li>run <code>npm start</code></li>
 </ul>
 
-<h1>Code Folders and :</h1>
+<h1>Code Folders and Notes:</h1>
 <ul>
   <li>Notice that App.js contains Logic, though it is not in 'components' folder.</li>
   <li>'common' folder contains non component JS.</li>
